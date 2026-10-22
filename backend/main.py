@@ -72,6 +72,10 @@ async def health() -> dict[str, str]:
     """Report API process health without requiring database credentials."""
     return {"status": "healthy", "project": "YONINGDA"}
 
+@app.get("/")
+async def root():
+    return {"message": "YONINGDA API ishlayapti! Asosiy sahifa."}
+
 
 @app.post("/api/auth/register", response_model=UserResponse, status_code=201)
 async def register(
