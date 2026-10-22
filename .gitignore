@@ -12,3 +12,15 @@ venv/
 .pytest_cache/
 .vercel
 .env*
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+android/
+.env
+.env.local
+backend/.env
+*.apk
+.DS_Store
+*.log
