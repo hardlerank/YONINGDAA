@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YONINGDA — Profil</title>
+
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="liquid-glass.css">
+</head>
+
+<body>
+
+    <main class="profile-card" id="profile-card" hidden>
+
+        <h1 class="profile-logo">YONINGDA</h1>
+
+        <h2>JINSINGIZNI TANLANG</h2>
+
+        <p class="description">
+            Sizga mos muammolar va savollarni ko‘rsatish
+            uchun tanlovingiz kerak.
+        </p>
+
+
+        <div class="gender-options">
+
+            <button
+                type="button"
+                class="gender-button"
+                data-gender="female"
+            >
+                <span class="gender-icon">♀</span>
+                <span>AYOL</span>
+            </button>
+
+
+            <button
+                type="button"
+                class="gender-button"
+                data-gender="male"
+            >
+                <span class="gender-icon">♂</span>
+                <span>ERKAK</span>
+            </button>
+
+        </div>
+
+
+        <p class="section-title">
+            YOSHINGIZNI TANLANG
+        </p>
+
+
+        <select id="age" class="age-select">
+
+            <option value="" selected disabled>
+                Yoshni tanlang
+            </option>
+
+            <option value="13-15">
+                13–15
+            </option>
+
+            <option value="16-17">
+                16–17
+            </option>
+
+            <option value="18-20">
+                18–20
+            </option>
+
+            <option value="21-25">
+                21–25
+            </option>
+
+            <option value="26-35">
+                26–35
+            </option>
+
+            <option value="36+">
+                36+
+            </option>
+
+        </select>
+
+
+        <p
+            class="error-message"
+            id="errorMessage"
+        ></p>
+
+
+        <button
+            type="button"
+            class="continue-button"
+            id="continueButton"
+        >
+            DAVOM ETISH
+        </button>
+
+        <p class="error-message" id="logoutError"></p>
+        <button type="button" class="continue-button" id="logoutButton">CHIQISH</button>
+
+    </main>
+
+
+    <script src="liquid-glass.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth-api.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+
+</html>

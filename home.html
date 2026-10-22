@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f3fb">
+    <title>YONINGDA — Home</title>
+    <link rel="stylesheet" href="liquid-glass.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="auth-state" id="auth-loading" role="status" aria-live="polite">
+        <span class="loading-mark" aria-hidden="true">Y</span>
+        <p>Sessiya tekshirilmoqda…</p>
+    </div>
+
+    <main class="auth-state auth-error" id="auth-error" hidden>
+        <span class="loading-mark" aria-hidden="true">Y</span>
+        <h1>Ulanib bo‘lmadi</h1>
+        <p id="auth-error-message">Sessiyani tekshirib bo‘lmadi. Qayta urinib ko‘ring.</p>
+        <button class="button button-primary" id="retry-auth" type="button">Qayta urinish</button>
+        <a class="text-link" href="login.html">Kirish sahifasiga o‘tish</a>
+    </main>
+
+    <div class="app-layout" id="dashboard" hidden>
+        <aside class="sidebar" aria-label="Asosiy navigatsiya">
+            <a class="brand" href="home.html" aria-label="YONINGDA Home">
+                <span class="brand-mark" aria-hidden="true">Y</span>
+                <span>YONINGDA</span>
+            </a>
+            <nav class="primary-nav" aria-label="Asosiy bo‘limlar">
+                <button class="nav-item is-active" type="button" data-view="home" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span>Home</span></button>
+                <button class="nav-item" type="button" data-view="search"><span class="nav-icon" aria-hidden="true">⌕</span><span>Search</span></button>
+                <button class="nav-item" type="button" data-view="ai"><span class="nav-icon" aria-hidden="true">✧</span><span>AI</span></button>
+                <button class="nav-item" type="button" data-view="chat"><span class="nav-icon" aria-hidden="true">▢</span><span>Chat</span></button>
+                <button class="nav-item" type="button" data-view="profile"><span class="nav-icon" aria-hidden="true">○</span><span>Profile</span></button>
+            </nav>
+            <p class="sidebar-note">Yoningizda — xotirjam qadamlar uchun.</p>
+        </aside>
+
+        <div class="page-column">
+            <header class="topbar">
+                <a class="brand mobile-brand" href="home.html" aria-label="YONINGDA Home">
+                    <span class="brand-mark" aria-hidden="true">Y</span>
+                    <span>YONINGDA</span>
+                </a>
+                <p class="topbar-caption">Siz uchun xavfsiz va xotirjam makon</p>
+                <button class="avatar-button" type="button" data-view="profile" aria-label="Profilni ochish"><span id="avatar-initial">Y</span></button>
+            </header>
+
+            <div class="content-wrap">
+                <section class="view-panel" data-panel="home" aria-labelledby="welcome-title">
+                    <div class="welcome-card glass-surface">
+                        <div class="welcome-copy">
+                            <p class="eyebrow">BUGUN O‘ZINGIZ UCHUN</p>
+                            <h1 id="welcome-title">Xush kelibsiz, <span id="welcome-name">do‘stim</span></h1>
+                            <p>O‘zingizga qulay sur’atda boshlang. Bu yerda sizni tinglashga tayyor makon bor.</p>
+                            <a class="button button-primary" href="index.html?topics=1">Mavzularni ko‘rish <span aria-hidden="true">→</span></a>
+                        </div>
+                        <div class="welcome-art" aria-hidden="true"><span class="art-orbit orbit-one"></span><span class="art-orbit orbit-two"></span><span class="art-center">Y</span><span class="art-sparkle">✦</span></div>
+                    </div>
+
+                    <div class="section-heading">
+                        <div><p class="eyebrow">SIZNING MAKONINGIZ</p><h2>Qayerdan boshlaymiz?</h2></div>
+                    </div>
+                    <div class="quick-grid">
+                        <a class="quick-card glass-surface" href="index.html?topics=1">
+                            <span class="quick-icon topics-icon" aria-hidden="true">✿</span>
+                            <span class="quick-card-copy"><strong>Mavzular</strong><small>O‘zingizga yaqin mavzuni tanlang</small></span>
+                            <span class="card-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        <button class="quick-card glass-surface" type="button" data-view="search">
+                            <span class="quick-icon search-icon" aria-hidden="true">⌕</span>
+                            <span class="quick-card-copy"><strong>Izlash</strong><small>Kerakli bo‘limni topish</small></span>
+                            <span class="card-arrow" aria-hidden="true">↗</span>
+                        </button>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        <section class="mood-card glass-surface" aria-labelledby="mood-title">
+                            <div class="section-heading compact-heading"><div><p class="eyebrow">IXTIYORIY</p><h2 id="mood-title">Hozir o‘zingizni qanday his qilyapsiz?</h2></div></div>
+                            <p class="muted-copy">Faqat o‘zingiz uchun belgilang. Javob yuborilmaydi va saqlanmaydi.</p>
+                            <div class="mood-options" role="group" aria-label="Ixtiyoriy kayfiyat tanlovi">
+                                <button class="mood-option" type="button" data-mood="Yaxshi" aria-pressed="false"><span aria-hidden="true">☀</span><small>Yaxshi</small></button>
+                                <button class="mood-option" type="button" data-mood="O‘rtacha" aria-pressed="false"><span aria-hidden="true">☁</span><small>O‘rtacha</small></button>
+                                <button class="mood-option" type="button" data-mood="Og‘irroq" aria-pressed="false"><span aria-hidden="true">☂</span><small>Og‘irroq</small></button>
+                            </div>
+                            <p class="mood-status" id="mood-status" role="status" aria-live="polite"></p>
+                        </section>
+                        <section class="recommendation-card glass-surface" aria-labelledby="recommendations-title">
+                            <span class="recommendation-icon" aria-hidden="true">✧</span>
+                            <p class="eyebrow">KELAJAKDAGI TAVSIYALAR</p>
+                            <h2 id="recommendations-title">Shaxsiy tavsiyalar shu yerda</h2>
+                            <p class="muted-copy">Tavsiya funksiyasi hozircha mavjud emas. Bu bo‘lim tayyor bo‘lganda yangilanadi.</p>
+                        </section>
+                    </div>
+                </section>
+
+                <section class="view-panel prototype-panel" data-panel="search" aria-labelledby="search-title" hidden>
+                    <p class="eyebrow">YONINGDA • SEARCH</p><h1 id="search-title">Izlash</h1>
+                    <div class="prototype-card glass-surface"><span class="prototype-icon" aria-hidden="true">⌕</span><span class="status-pill">PROTOTIP</span><h2>Izlash hozircha mavjud emas</h2><p>Backendda izlash xizmati mavjud bo‘lganda bu bo‘lim ishlaydi.</p><a class="button button-secondary" href="index.html?topics=1">Mavzularni ko‘rish</a></div>
+                </section>
+                <section class="view-panel prototype-panel" data-panel="ai" aria-labelledby="ai-title" hidden>
+                    <p class="eyebrow">YONINGDA • AI</p><h1 id="ai-title">AI yordamchi</h1>
+                    <div class="prototype-card glass-surface"><span class="prototype-icon" aria-hidden="true">✧</span><span class="status-pill">PROTOTIP</span><h2>AI xizmati hali ulanmagan</h2><p>Bu yerda hozircha AI javoblari yaratilmaydi. Haqiqiy va himoyalangan backend xizmati tayyor bo‘lganda faollashadi.</p></div>
+                </section>
+                <section class="view-panel prototype-panel" data-panel="chat" aria-labelledby="chat-title" hidden>
+                    <p class="eyebrow">YONINGDA • CHAT</p><h1 id="chat-title">Chat</h1>
+                    <div class="prototype-card glass-surface"><span class="prototype-icon" aria-hidden="true">▢</span><span class="status-pill">PROTOTIP</span><h2>Xabar almashish hali mavjud emas</h2><p>Chat va xabarlar tizimi ulanmagan. Bu sahifa suhbat yoki xabarlarni taqlid qilmaydi.</p></div>
+                </section>
+                <section class="view-panel profile-panel" data-panel="profile" aria-labelledby="profile-title" hidden>
+                    <p class="eyebrow">HISOB</p><h1 id="profile-title">Profil</h1>
+                    <div class="profile-card glass-surface">
+                        <div class="profile-avatar" id="profile-avatar" aria-hidden="true">Y</div>
+                        <div class="profile-details"><h2 id="profile-name">Yuklanmoqda…</h2><p class="muted-copy">Hisob ma’lumotlari</p>
+                            <dl><div><dt>Telefon</dt><dd id="profile-phone">—</dd></div><div id="profile-gender-row" hidden><dt>Jins</dt><dd id="profile-gender">—</dd></div></dl>
+                        </div>
+                    </div>
+                    <p class="profile-note">Bu ma’lumotlar faqat amaldagi hisob sessiyasi orqali ko‘rsatiladi.</p>
+                    <p class="inline-error" id="logout-error" role="alert"></p>
+                    <button class="button button-secondary logout-button" id="logout-button" type="button">Tizimdan chiqish</button>
+                </section>
+            </div>
+
+            <nav class="mobile-nav" aria-label="Asosiy bo‘limlar">
+                <button class="nav-item is-active" type="button" data-view="home" aria-current="page"><span class="nav-icon" aria-hidden="true">⌂</span><span>Home</span></button>
+                <button class="nav-item" type="button" data-view="search"><span class="nav-icon" aria-hidden="true">⌕</span><span>Search</span></button>
+                <button class="nav-item" type="button" data-view="ai"><span class="nav-icon" aria-hidden="true">✧</span><span>AI</span></button>
+                <button class="nav-item" type="button" data-view="chat"><span class="nav-icon" aria-hidden="true">▢</span><span>Chat</span></button>
+                <button class="nav-item" type="button" data-view="profile"><span class="nav-icon" aria-hidden="true">○</span><span>Profile</span></button>
+            </nav>
+        </div>
+    </div>
+
+    <script src="liquid-glass.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth-api.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>
