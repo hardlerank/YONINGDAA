@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Local configuration and secrets
 .env
 .env.*
@@ -24,3 +25,19 @@ backend/.env
 *.apk
 .DS_Store
 *.log
+=======
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.vercel
+.env*
+>>>>>>> e76fb39649d7a1e1c0f129abfdb571269e5e7a08

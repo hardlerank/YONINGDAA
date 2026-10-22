@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="uz">
 
@@ -177,4 +178,185 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <p class="status-message" id="registrationStatus" role="status" aria-live="polite"></p>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YONINGDA — Ro‘yxatdan o‘tish</title>
+
+    <link rel="stylesheet" href="registar.css">
+    <link rel="stylesheet" href="liquid-glass.css">
+</head>
+
+<body>
+
+    <main class="register-card">
+
+        <button
+            type="button"
+            class="back-button"
+            onclick="window.location.href='index.html'"
+        >
+            ← ORTGA
+        </button>
+
+        <h1 class="register-logo">YONINGDA</h1>
+
+        <h2>RO‘YXATDAN O‘TISH</h2>
+
+        <label for="firstName">Ism</label>
+
+        <div class="input-box">
+            <input
+                type="text"
+                id="firstName"
+                placeholder=""
+                autocomplete="given-name"
+            >
+        </div>
+
+        <p class="error-message" id="firstNameError"></p>
+
+
+        <label for="lastName">Familiya</label>
+
+        <div class="input-box">
+            <input
+                type="text"
+                id="lastName"
+                placeholder=""
+                autocomplete="family-name"
+            >
+        </div>
+
+        <p class="error-message" id="lastNameError"></p>
+
+
+        <label for="phone">Telefon raqam</label>
+
+        <div class="input-box phone-box">
+
+            <span class="prefix">+998</span>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder=""
+                maxlength="9"
+                autocomplete="tel"
+            >
+
+        </div>
+
+        <p class="error-message" id="phoneError"></p>
+
+
+        <label for="password">Parol</label>
+
+        <div class="input-box password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder=""
+                autocomplete="new-password"
+            >
+
+            <button
+                type="button"
+                class="eye-button"
+                id="passwordEye"
+            >
+                👁
+            </button>
+
+        </div>
+
+        <p class="error-message" id="passwordError"></p>
+
+
+        <label for="confirmPassword">Parolni tasdiqlang</label>
+
+        <div class="input-box password-box">
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder=""
+                autocomplete="new-password"
+            >
+
+            <button
+                type="button"
+                class="eye-button"
+                id="confirmEye"
+            >
+                👁
+            </button>
+
+        </div>
+
+        <p class="error-message" id="confirmPasswordError"></p>
+
+
+        <label class="rules">
+
+            <input
+                type="checkbox"
+                id="rules"
+            >
+
+            <span>
+                Qoidalar bilan tanishdim
+            </span>
+
+        </label>
+
+        <p class="error-message" id="rulesError"></p>
+
+
+        <button
+            type="button"
+            class="continue-button"
+            id="continueButton"
+        >
+
+            <span id="continueText">
+                DAVOM ETISH
+            </span>
+
+        </button>
+
+        <p class="status-message" id="registrationStatus" role="status" aria-live="polite"></p>
+
+
+        <p class="login-text">
+            Hisobingiz bormi?
+        </p>
+
+        <button
+            type="button"
+            class="login-link"
+            onclick="window.location.href='login.html'"
+        >
+            Kiring
+        </button>
+
+    </main>
+
+
+    <script src="liquid-glass.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth-api.js"></script>
+    <script src="registar.js"></script>
+
+</body>
+
+>>>>>>> e76fb39649d7a1e1c0f129abfdb571269e5e7a08
 </html>

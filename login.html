@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="uz">
@@ -106,3 +107,113 @@
 </body>
 
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YONINGDA — Kirish</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="liquid-glass.css">
+</head>
+
+<body>
+
+    <main class="login-card">
+
+        <h1 class="login-logo">YONINGDA</h1>
+
+        <h2>KIRISH</h2>
+        <p class="status-message" id="loginStatus" role="status" aria-live="polite"></p>
+
+
+        <!-- TELEFON -->
+
+        <label for="phone">Telefon raqam</label>
+
+        <div class="input-box">
+
+            <span class="prefix">+998</span>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder=""
+                maxlength="12"
+            >
+
+        </div>
+
+        <p class="error-message" id="phoneError"></p>
+
+
+        <!-- PAROL -->
+
+        <label for="password">Parol</label>
+
+        <div class="input-box password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder=""
+            >
+
+            <button
+                type="button"
+                class="eye-button"
+                id="eyeButton"
+            >
+                👁
+            </button>
+
+        </div>
+
+        <p class="error-message" id="passwordError"></p>
+
+
+        <!-- KIRISH -->
+
+        <button
+            type="button"
+            class="login-button"
+            id="loginButton"
+        >
+            <span id="loginText">KIRISH</span>
+        </button>
+
+
+        <!-- PASTKI QISMLAR -->
+
+        <button
+            type="button"
+            class="forgot-button"
+        >
+            Parolni unutdingizmi?
+        </button>
+
+        <button
+            type="button"
+            class="register-button"
+            onclick="window.location.href='registar.html'"
+        >
+            Ro‘yxatdan o‘tish
+        </button>
+
+    </main>
+
+
+    <script src="liquid-glass.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth-api.js"></script>
+    <script src="login.js"></script>
+
+</body>
+
+</html>
+>>>>>>> e76fb39649d7a1e1c0f129abfdb571269e5e7a08

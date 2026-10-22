@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="uz">
@@ -279,3 +280,286 @@
 </body>
 
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YONINGDA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="liquid-glass.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <section id="landing-screen" class="screen active">
+            <main class="glass-card landing-card">
+                <div class="content">
+                    <h1 class="logo-text" aria-label="YONINGDA">
+                        <span>Y</span><span>O</span><span>N</span><span>I</span>
+                        <span>N</span><span>G</span><span>D</span><span>A</span>
+                    </h1>
+
+                    <div class="buttons">
+                        <button class="register-btn" data-target="auth-screen">RO‘YXATDAN O‘TISH</button>
+                        <button class="login-btn" data-target="auth-screen">KIRISH</button>
+                    </div>
+                    <p class="status-message" id="startup-status" role="status" aria-live="polite"></p>
+                </div>
+
+                <div class="features">
+                    <div class="feature-item">
+                        <button class="feature-button" type="button">🔒 Maxfiylik</button>
+                        <div class="feature-info">
+                            <p>Shaxsiy ma'lumotlaringiz himoyalangan.</p>
+                            <p>Sizning ma'lumotlaringiz maxfiy saqlanadi.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <button class="feature-button" type="button"> YONINGDA nima?</button>
+                        <div class="feature-info">
+                            <p>✓ Muammoingizni tanlaysiz</p>
+                            <p>✓ Sizga mos savollarga javob berasiz</p>
+                            <p>✓ Javoblaringiz asosida foydali tavsiyalar olasiz</p>
+                            <p>✓ Kerak bo‘lsa mas'ul xodim bilan bog‘lanishingiz mumkin</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <button class="feature-button" type="button">🤝 Qo‘llab-quvvatlash</button>
+                        <div class="feature-info">
+                            <p>Siz yolg‘iz emassiz.</p>
+                            <p>Kerak bo‘lsa mas'ul xodim bilan bog‘lanishingiz mumkin.</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+        <section id="auth-screen" class="screen">
+            <div class="auth-shell glass-panel">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-auth-tab="login">Kirish</button>
+                    <button class="auth-tab" data-auth-tab="register">Ro‘yhatdan o‘tish</button>
+                </div>
+
+                <div id="login-form-box" class="auth-form-box active">
+                    <h2>KIRISH</h2>
+                    <p class="status-message" id="login-status" role="status" aria-live="polite"></p>
+
+                    <label for="login-phone">Telefon raqam</label>
+                    <div class="input-box">
+                        <span class="prefix">+998</span>
+                        <input type="tel" id="login-phone" maxlength="9" inputmode="numeric" autocomplete="tel">
+                    </div>
+                    <p class="error-message" id="login-phone-error"></p>
+
+                    <label for="login-password">Parol</label>
+                    <div class="input-box password-box">
+                        <input type="password" id="login-password" autocomplete="current-password">
+                        <button type="button" class="eye-button" data-toggle-password="login-password">👁</button>
+                    </div>
+                    <p class="error-message" id="login-password-error"></p>
+
+                    <button type="button" class="primary-button" id="login-submit">KIRISH</button>
+                    <button type="button" class="link-button" data-target="landing-screen">Asosiy sahifaga qaytish</button>
+                </div>
+
+                <div id="register-form-box" class="auth-form-box">
+                    <h2>RO‘YXATDAN O‘TISH</h2>
+                    <p class="status-message" id="register-status" role="status" aria-live="polite"></p>
+
+                    <label for="register-firstname">Ism</label>
+                    <div class="input-box">
+                        <input type="text" id="register-firstname" autocomplete="given-name">
+                    </div>
+                    <p class="error-message" id="register-firstname-error"></p>
+
+                    <label for="register-lastname">Familiya</label>
+                    <div class="input-box">
+                        <input type="text" id="register-lastname" autocomplete="family-name">
+                    </div>
+                    <p class="error-message" id="register-lastname-error"></p>
+
+                    <label for="register-phone">Telefon raqam</label>
+                    <div class="input-box">
+                        <span class="prefix">+998</span>
+                        <input type="tel" id="register-phone" maxlength="9" inputmode="numeric" autocomplete="tel">
+                    </div>
+                    <p class="error-message" id="register-phone-error"></p>
+
+                    <label for="register-password">Parol</label>
+                    <div class="input-box password-box">
+                        <input type="password" id="register-password" autocomplete="new-password">
+                        <button type="button" class="eye-button" data-toggle-password="register-password">👁</button>
+                    </div>
+                    <p class="error-message" id="register-password-error"></p>
+
+                    <label for="register-confirm-password">Parolni tasdiqlang</label>
+                    <div class="input-box password-box">
+                        <input type="password" id="register-confirm-password" autocomplete="new-password">
+                        <button type="button" class="eye-button" data-toggle-password="register-confirm-password">👁</button>
+                    </div>
+                    <p class="error-message" id="register-confirm-error"></p>
+
+                    <label class="rules-checkbox">
+                        <input type="checkbox" id="register-rules">
+                        <span>Qoidalar bilan tanishdim</span>
+                    </label>
+                    <p class="error-message" id="register-rules-error"></p>
+
+                    <button type="button" class="primary-button" id="register-submit">DAVOM ETISH</button>
+                    <button type="button" class="link-button" data-target="landing-screen">Ortga</button>
+                </div>
+
+                <div id="verify-form-box" class="auth-form-box">
+                    <h2>RAQAMNI TASDIQLANG</h2>
+                    <p class="verify-description">SMS orqali tasdiqlash backendda hozircha mavjud emas.</p>
+
+                    <div class="code-inputs">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                        <input class="code-input" type="text" maxlength="1" inputmode="numeric">
+                    </div>
+                    <p class="error-message" id="verify-error"></p>
+
+                    <div class="timer" id="verify-timer">00:58</div>
+                    <button type="button" class="primary-button" id="verify-submit">KODNI TASDIQLASH</button>
+                    <button type="button" class="link-button" id="resend-code">Qayta yuborish</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile-screen" class="screen">
+            <div class="profile-card glass-panel">
+                <h1 class="profile-logo">YONINGDA</h1>
+                <h2>JINSINGIZNI TANLANG</h2>
+                <p class="description">Sizga mos muammolar va savollarni ko‘rsatish uchun tanlovingiz kerak.</p>
+
+                <div class="gender-options">
+                    <button type="button" class="gender-button" data-gender="female">
+                        <span class="gender-icon">♀</span>
+                        <span>AYOL</span>
+                    </button>
+                    <button type="button" class="gender-button" data-gender="male">
+                        <span class="gender-icon">♂</span>
+                        <span>ERKAK</span>
+                    </button>
+                </div>
+
+                <p class="section-title">YOSHINGIZNI TANLANG</p>
+                <select id="profile-age" class="age-select">
+                    <option value="" selected disabled>Yoshni tanlang</option>
+                    <option value="13-15">13–15</option>
+                    <option value="16-17">16–17</option>
+                    <option value="18-20">18–20</option>
+                    <option value="21-25">21–25</option>
+                    <option value="26-35">26–35</option>
+                    <option value="36+">36+</option>
+                </select>
+
+                <p class="error-message" id="profile-error"></p>
+                <button type="button" class="primary-button" id="profile-submit">DAVOM ETISH</button>
+                <button type="button" class="link-button" id="profile-logout">CHIQISH</button>
+            </div>
+        </section>
+
+        <section id="main-screen" class="screen">
+            <div class="main-shell">
+                <header class="main-header glass-panel">
+                    <div class="brand-wrap">
+                        <h1 class="main-logo">YONINGDA</h1>
+                    </div>
+                    <a class="profile-mini" href="home.html">← Home dashboard</a>
+                    <button class="profile-mini" id="profile-mini-button">👤 Profil</button>
+                    <button class="profile-mini" id="logout-button">Chiqish</button>
+                </header>
+
+                <div class="main-card glass-panel">
+                    <p class="greeting">Salom!</p>
+                    <h2>Sizni nima qiynayapti?</h2>
+                    <p class="subtext">Muammoingizni tanlang.</p>
+
+                    <div id="category-grid" class="category-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="subcategories-screen" class="screen">
+            <div class="problems-shell glass-panel">
+                <button class="back-button" data-target="main-screen">← Orqaga</button>
+                <p class="problem-tag">1-BOSQICH</p>
+                <h2 id="subcategories-title">Yo‘nalishni tanlang</h2>
+                <p class="subtext">Muammoingizga eng yaqin yo‘nalishni tanlang.</p>
+                <div id="subcategory-list" class="problem-list"></div>
+            </div>
+        </section>
+
+        <section id="problems-screen" class="screen">
+            <div class="problems-shell glass-panel">
+                <button class="back-button" data-target="subcategories-screen">← Orqaga</button>
+                <p class="problem-tag">2-BOSQICH</p>
+                <h2 id="problems-title">Muammolar</h2>
+                <div id="problem-list" class="problem-list"></div>
+            </div>
+        </section>
+
+        <section id="selected-problem-screen" class="screen">
+            <div class="problem-detail glass-panel">
+                <button class="back-button" data-target="problems-screen">← Orqaga</button>
+                <p class="problem-tag" id="selected-problem-tag">Muammo</p>
+                <h2 id="selected-problem-title">Tanlangan muammo</h2>
+                <div class="support-card">
+                    <p id="selected-problem-message">Bu yerda muammo bo‘yicha tavsiya va yordam ko‘rsatiladi.</p>
+                    <ul id="selected-problem-tips"></ul>
+                </div>
+                <button type="button" class="primary-button" id="start-questionnaire">Savollarga o‘tish →</button>
+            </div>
+        </section>
+
+        <section id="questionnaire-screen" class="screen">
+            <div class="questionnaire-card glass-panel">
+                <button class="back-button" id="questionnaire-back">← Orqaga</button>
+                <div class="questionnaire-heading">
+                    <p class="problem-tag" id="questionnaire-tag">Savolnoma</p>
+                    <span id="question-progress-label">1 / 15</span>
+                </div>
+                <div class="progress-track"><span id="question-progress-bar"></span></div>
+                <h2 id="question-title">Savol</h2>
+                <p class="question-help">Javobingizni o‘zingizga qulay tarzda tanlang. Bu tashxis emas.</p>
+                <div id="question-options" class="question-options"></div>
+                <p class="error-message" id="question-error"></p>
+                <button type="button" class="secondary-button" id="skip-question">Javob bermayman</button>
+                <button type="button" class="primary-button" id="next-question">Davom etish →</button>
+            </div>
+        </section>
+
+        <section id="result-screen" class="screen">
+            <div class="problem-detail glass-panel">
+                <p class="problem-tag">YAKUNLANDI</p>
+                <h2>Javoblaringiz qabul qilindi.</h2>
+                <div class="support-card">
+                    <p id="result-message">Javoblaringiz bo‘yicha qo‘shimcha qo‘llab-quvvatlash foydali bo‘lishi mumkin.</p>
+                    <ul id="result-tips"></ul>
+                </div>
+                <button type="button" class="primary-button" data-target="main-screen">Bosh sahifaga qaytish</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="liquid-glass.js"></script>
+    <script src="api-config.js"></script>
+    <script src="auth-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+>>>>>>> e76fb39649d7a1e1c0f129abfdb571269e5e7a08
