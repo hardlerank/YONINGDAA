@@ -1,0 +1,404 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    color: #182033;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #b9c8ff 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #d9b8ff 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #dfe5f5
+        );
+}
+
+
+/* ASOSIY GLASS */
+
+.login-card {
+    width: min(90%, 450px);
+
+    padding: 45px 40px;
+
+    border-radius: 32px;
+
+    background: rgba(255, 255, 255, 0.20);
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+
+    box-shadow:
+        0 25px 70px rgba(50, 60, 100, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+
+/* LOGO */
+
+.login-logo {
+    text-align: center;
+
+    font-size: 32px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 35px;
+}
+
+
+/* KIRISH */
+
+h2 {
+    text-align: center;
+
+    font-size: 22px;
+
+    margin-bottom: 35px;
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* INPUT */
+
+.input-box {
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    margin-bottom: 5px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: 0.25s ease;
+}
+
+.input-box:focus-within {
+    background: rgba(255, 255, 255, 0.30);
+
+    border-color: rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 0 0 3px rgba(120, 130, 200, 0.10);
+}
+
+
+/* +998 */
+
+.prefix {
+    font-weight: 600;
+
+    margin-right: 8px;
+}
+
+
+/* INPUT ICHIDAGI */
+
+input {
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #182033;
+
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: rgba(24, 32, 51, 0.40);
+}
+
+
+/* PAROL */
+
+.password-box input {
+    padding-right: 10px;
+}
+
+
+/* KO‘Z */
+
+.eye-button {
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    opacity: 0.65;
+
+    transition: 0.2s ease;
+}
+
+.eye-button:hover {
+    opacity: 1;
+
+    transform: scale(1.1);
+}
+
+
+/* XATO */
+
+.error-message {
+    min-height: 20px;
+
+    margin-bottom: 13px;
+
+    font-size: 12px;
+
+    color: #d94b5b;
+}
+
+.status-message {
+    min-height: 18px;
+    margin: 4px 0 10px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: rgba(40, 107, 76, 0.95);
+}
+
+
+/* KIRISH BUTTON */
+
+.login-button {
+    width: 100%;
+
+    height: 55px;
+
+    margin-top: 8px;
+
+    border: 1px solid rgba(255, 255, 255, 0.60);
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(15px);
+
+    color: #182033;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.login-button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.50);
+
+    box-shadow:
+        0 10px 30px rgba(60, 70, 120, 0.15);
+}
+
+.login-button:active {
+    transform: scale(0.98);
+}
+
+
+/* LOADING */
+
+.login-button.loading {
+    pointer-events: none;
+
+    opacity: 0.7;
+}
+
+
+/* FORGOT */
+
+.forgot-button {
+    display: block;
+
+    margin: 22px auto 25px;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(24, 32, 51, 0.65);
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.forgot-button:hover {
+    color: #182033;
+}
+
+
+/* REGISTER */
+
+.register-text {
+    text-align: center;
+
+    font-size: 13px;
+
+    color: rgba(24, 32, 51, 0.60);
+
+    margin-bottom: 8px;
+}
+
+.register-button {
+    display: block;
+
+    margin: auto;
+
+    border: none;
+
+    background: transparent;
+
+    color: #182033;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.register-button:hover {
+    text-decoration: underline;
+}
+
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    .login-card {
+        width: 100%;
+
+        padding: 35px 25px;
+
+        border-radius: 28px;
+    }
+
+    .login-logo {
+        font-size: 27px;
+    }
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+        max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+}
+
+.login-card {
+    width: min(100%, 450px);
+    margin-block: auto;
+    padding: clamp(26px, 6vw, 45px) clamp(18px, 7vw, 40px);
+}
+
+.login-logo {
+    font-size: clamp(25px, 7vw, 32px);
+    letter-spacing: clamp(2px, 1vw, 5px);
+}
+
+input,
+button {
+    font: inherit;
+}
+
+input {
+    min-width: 0;
+}
+
+.input-box,
+.login-button {
+    min-height: 48px;
+}
+
+@media (max-height: 560px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .login-card {
+        margin-block: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

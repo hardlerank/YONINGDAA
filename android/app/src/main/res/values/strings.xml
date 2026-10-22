@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">YONINGDA</string>
+    <string name="title_activity_main">YONINGDA</string>
+    <string name="package_name">uz.yoningda.app</string>
+    <string name="custom_url_scheme">uz.yoningda.app</string>
+</resources>

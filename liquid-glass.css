@@ -1,0 +1,572 @@
+/* Shared YONINGDA glass material system: one light-touch visual layer for every page. */
+:root {
+    --glass-ease: cubic-bezier(0.2, 0.75, 0.25, 1);
+    --glass-stroke: rgba(255, 255, 255, 0.46);
+    --glass-ink: #182b46;
+}
+
+@property --glass-x {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 50%;
+}
+
+@property --glass-y {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+@property --glass-cursor-opacity {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+body {
+    background-color: #e7eef8;
+    background-image:
+        radial-gradient(ellipse at 12% 12%, rgba(162, 204, 237, 0.74), transparent 40%),
+        radial-gradient(ellipse at 86% 78%, rgba(191, 198, 233, 0.58), transparent 44%),
+        radial-gradient(ellipse at 68% 8%, rgba(159, 218, 228, 0.36), transparent 36%),
+        linear-gradient(140deg, #eaf2fa 0%, #e3ebf7 56%, #eceefa 100%);
+    color: var(--glass-ink);
+}
+
+/* Level 1 — broad, airy surfaces. */
+.glass-card,
+.glass-panel,
+.login-card,
+.profile-card,
+.register-card,
+.verify-card {
+    --glass-fill: rgba(237, 246, 255, 0.105);
+    --glass-light: rgba(255, 255, 255, 0.19);
+    border-color: var(--glass-stroke);
+    background-color: var(--glass-fill);
+    background-image:
+        radial-gradient(ellipse 250px 190px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 74%),
+        linear-gradient(145deg, var(--glass-light) 0%, rgba(255, 255, 255, 0.018) 34%, rgba(191, 224, 242, 0.035) 72%, rgba(255, 255, 255, 0.075) 100%);
+    -webkit-backdrop-filter: blur(22px) saturate(128%);
+    backdrop-filter: blur(22px) saturate(128%);
+    box-shadow:
+        0 22px 58px rgba(54, 78, 112, 0.14),
+        0 3px 12px rgba(74, 102, 139, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.72),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition:
+        background-color 240ms var(--glass-ease),
+        --glass-x 300ms var(--glass-ease),
+        --glass-y 300ms var(--glass-ease),
+        --glass-cursor-opacity 180ms ease,
+        border-color 240ms var(--glass-ease),
+        box-shadow 240ms var(--glass-ease),
+        transform 240ms var(--glass-ease);
+}
+
+/* Level 2 — smaller cards, controls, and form surfaces. */
+.feature-info,
+.support-card,
+.main-header,
+.main-card,
+.input-box,
+.code-input,
+.age-select,
+.question-option,
+.auth-tab,
+.feature-button,
+.profile-mini,
+.gender-button,
+.category-button,
+.problem-button {
+    --glass-fill: rgba(237, 246, 255, 0.115);
+    --glass-light: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.48);
+    background-color: var(--glass-fill);
+    background-image:
+        radial-gradient(ellipse 190px 140px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 74%),
+        linear-gradient(145deg, var(--glass-light), rgba(255, 255, 255, 0.02) 55%, rgba(205, 231, 244, 0.055));
+    -webkit-backdrop-filter: blur(13px) saturate(128%);
+    backdrop-filter: blur(13px) saturate(128%);
+    box-shadow:
+        0 8px 24px rgba(54, 78, 112, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.62),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    transition:
+        background-color 190ms var(--glass-ease),
+        --glass-x 260ms var(--glass-ease),
+        --glass-y 260ms var(--glass-ease),
+        --glass-cursor-opacity 160ms ease,
+        border-color 190ms var(--glass-ease),
+        box-shadow 190ms var(--glass-ease),
+        transform 190ms var(--glass-ease),
+        filter 190ms var(--glass-ease);
+}
+
+/* Level 3 — primary actions have a little more surface contrast, not opacity. */
+.buttons button,
+.primary-button,
+.continue-button,
+.verify-button,
+.login-button,
+.back-button {
+    --glass-fill: rgba(211, 230, 248, 0.23);
+    --glass-light: rgba(255, 255, 255, 0.30);
+    border-color: rgba(255, 255, 255, 0.58);
+    background-color: var(--glass-fill);
+    color: var(--glass-ink);
+    background-image:
+        radial-gradient(ellipse 180px 120px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 75%),
+        linear-gradient(145deg, var(--glass-light), rgba(255, 255, 255, 0.045) 58%, rgba(181, 215, 237, 0.12));
+    -webkit-backdrop-filter: blur(16px) saturate(132%);
+    backdrop-filter: blur(16px) saturate(132%);
+    box-shadow:
+        0 9px 24px rgba(56, 83, 125, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.70),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    transition:
+        background-color 180ms var(--glass-ease),
+        --glass-x 240ms var(--glass-ease),
+        --glass-y 240ms var(--glass-ease),
+        --glass-cursor-opacity 150ms ease,
+        border-color 180ms var(--glass-ease),
+        box-shadow 180ms var(--glass-ease),
+        transform 180ms var(--glass-ease),
+        filter 180ms var(--glass-ease);
+}
+
+/* Selected and focused controls — level 4. */
+.gender-button.selected,
+.auth-tab.active,
+.input-box:focus-within,
+.code-input:focus,
+.age-select:focus,
+.question-option:has(input:checked) {
+    --glass-fill: rgba(224, 239, 252, 0.34);
+    border-color: rgba(143, 178, 211, 0.48);
+    background-color: var(--glass-fill);
+    box-shadow:
+        0 8px 26px rgba(69, 105, 149, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.13),
+        0 0 0 3px rgba(139, 178, 216, 0.08);
+}
+
+/* Keep the light confined to each surface, below its readable content. */
+.glass-card,
+.glass-panel,
+.login-card,
+.profile-card,
+.register-card,
+.verify-card,
+.feature-info,
+.support-card,
+.main-header,
+.main-card,
+.input-box,
+.code-input,
+.age-select,
+.question-option,
+.auth-tab,
+.feature-button,
+.profile-mini,
+.gender-button,
+.category-button,
+.problem-button,
+.buttons button,
+.primary-button,
+.continue-button,
+.verify-button,
+.login-button,
+.back-button {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .glass-card:hover,
+    .glass-panel:hover,
+    .login-card:hover,
+    .profile-card:hover,
+    .register-card:hover,
+    .verify-card:hover {
+        --glass-fill: rgba(237, 246, 255, 0.13);
+        border-color: rgba(255, 255, 255, 0.54);
+        box-shadow:
+            0 25px 64px rgba(54, 78, 112, 0.16),
+            0 4px 14px rgba(74, 102, 139, 0.07),
+            inset 0 1px 0 rgba(255, 255, 255, 0.76),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+    }
+
+    .feature-button:hover,
+    .profile-mini:hover,
+    .gender-button:hover,
+    .category-button:hover,
+    .problem-button:hover,
+    .auth-tab:hover,
+    .buttons button:hover,
+    .primary-button:hover,
+    .continue-button:hover,
+    .verify-button:hover,
+    .login-button:hover,
+    .back-button:hover {
+        --glass-fill: rgba(229, 241, 253, 0.28);
+        border-color: rgba(255, 255, 255, 0.66);
+        filter: brightness(1.035);
+        transform: translateY(-2px);
+        box-shadow:
+            0 12px 28px rgba(55, 84, 127, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.76),
+            inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+    }
+}
+
+.feature-button:active,
+.profile-mini:active,
+.gender-button:active,
+.category-button:active,
+.problem-button:active,
+.auth-tab:active,
+.buttons button:active,
+.primary-button:active,
+.continue-button:active,
+.verify-button:active,
+.login-button:active,
+.back-button:active {
+    --glass-fill: rgba(203, 221, 241, 0.36);
+    filter: brightness(0.985);
+    transform: scale(0.985);
+    transition-duration: 90ms;
+}
+
+@media (hover: none) {
+    .glass-card:hover,
+    .glass-panel:hover,
+    .login-card:hover,
+    .profile-card:hover,
+    .register-card:hover,
+    .verify-card:hover {
+        --glass-fill: rgba(237, 246, 255, 0.105);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Refined shared material: calm contrast, soft refraction, and quiet depth. */
+:root {
+    --glass-ease: cubic-bezier(0.22, 0.72, 0.24, 1);
+    --glass-ink: #172c46;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #e4edf5;
+    background-image:
+        radial-gradient(ellipse at 14% 12%, rgba(119, 177, 216, 0.34), transparent 38%),
+        radial-gradient(ellipse at 88% 77%, rgba(151, 159, 209, 0.24), transparent 40%),
+        radial-gradient(ellipse at 76% 8%, rgba(111, 201, 211, 0.16), transparent 32%),
+        linear-gradient(142deg, #e6f0f7 0%, #e1eaf3 54%, #e9eaf5 100%);
+}
+
+/* Broad panels stay transparent while their layered edges define the shape. */
+.glass-card,
+.glass-panel,
+.login-card,
+.profile-card,
+.register-card,
+.verify-card {
+    --glass-fill: rgba(239, 247, 253, 0.14);
+    --glass-light: rgba(255, 255, 255, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.66);
+    background-color: var(--glass-fill);
+    background-image:
+        radial-gradient(ellipse 250px 180px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 74%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 32%, rgba(205, 229, 244, 0.04) 70%, rgba(255, 255, 255, 0.12)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 55%, rgba(55, 88, 128, 0.035));
+    -webkit-backdrop-filter: blur(19px) saturate(138%);
+    backdrop-filter: blur(19px) saturate(138%);
+    box-shadow:
+        0 24px 62px rgba(41, 66, 99, 0.14),
+        0 4px 14px rgba(41, 66, 99, 0.055),
+        inset 0 1px 0 rgba(255, 255, 255, 0.84),
+        inset 0 -1px 0 rgba(66, 103, 145, 0.08),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* Lightweight controls share the same surface language with less blur. */
+.feature-info,
+.support-card,
+.main-header,
+.main-card,
+.input-box,
+.code-input,
+.age-select,
+.question-option,
+.auth-tab,
+.feature-button,
+.profile-mini,
+.gender-button,
+.category-button,
+.problem-button,
+.problem-tag,
+.custom-answer {
+    --glass-fill: rgba(235, 245, 252, 0.18);
+    border-color: rgba(255, 255, 255, 0.62);
+    background-color: var(--glass-fill);
+    background-image:
+        radial-gradient(ellipse 175px 125px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 75%),
+        linear-gradient(140deg, rgba(255, 255, 255, 0.27), rgba(255, 255, 255, 0.025) 53%, rgba(153, 195, 221, 0.07));
+    -webkit-backdrop-filter: blur(10px) saturate(136%);
+    backdrop-filter: blur(10px) saturate(136%);
+    box-shadow:
+        0 8px 22px rgba(43, 69, 101, 0.085),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        inset 0 -1px 0 rgba(63, 101, 142, 0.07),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+}
+
+/* Physical actions use a brighter top plane and a quiet lower edge. */
+.buttons button,
+.primary-button,
+.continue-button,
+.verify-button,
+.login-button,
+.back-button {
+    background-color: rgba(228, 241, 251, 0.24);
+    background-image:
+        radial-gradient(ellipse 155px 95px at var(--glass-x, 50%) var(--glass-y, 0%), rgba(255, 255, 255, var(--glass-cursor-opacity, 0)), transparent 76%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.40), rgba(255, 255, 255, 0.06) 58%, rgba(142, 191, 222, 0.13));
+    color: var(--glass-ink);
+    transition:
+        background-color 200ms var(--glass-ease),
+        --glass-x 340ms var(--glass-ease),
+        --glass-y 340ms var(--glass-ease),
+        --glass-cursor-opacity 180ms ease,
+        border-color 200ms var(--glass-ease),
+        box-shadow 200ms var(--glass-ease),
+        transform 260ms var(--glass-ease),
+        filter 200ms var(--glass-ease);
+}
+
+.primary-button,
+.continue-button,
+.verify-button,
+.login-button,
+.buttons .register-btn {
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    box-shadow:
+        0 10px 25px rgba(42, 76, 119, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.92),
+        inset 0 -1px 0 rgba(66, 108, 154, 0.10),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+.register-button,
+.forgot-button,
+.resend-button,
+.login-link,
+.link-button,
+.secondary-button,
+.eye-button {
+    transition:
+        color 180ms var(--glass-ease),
+        opacity 180ms var(--glass-ease),
+        transform 220ms var(--glass-ease),
+        box-shadow 180ms var(--glass-ease);
+}
+
+button,
+select,
+.question-option,
+.custom-answer {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+.question-option:focus-within {
+    outline: 3px solid rgba(58, 125, 173, 0.46);
+    outline-offset: 3px;
+}
+
+.input-box:focus-within,
+.code-input:focus,
+.age-select:focus,
+.custom-answer:focus {
+    border-color: rgba(83, 143, 185, 0.58);
+    box-shadow:
+        0 0 0 3px rgba(83, 143, 185, 0.11),
+        inset 0 1px 0 rgba(255, 255, 255, 0.88),
+        inset 0 0 14px rgba(123, 184, 216, 0.09);
+}
+
+.glass-card:hover,
+.glass-panel:hover,
+.login-card:hover,
+.profile-card:hover,
+.register-card:hover,
+.verify-card:hover {
+    --glass-fill: rgba(241, 248, 253, 0.16);
+    border-color: rgba(255, 255, 255, 0.74);
+}
+
+.gender-button.selected,
+.auth-tab.active,
+.question-option:has(input:checked) {
+    --glass-fill: rgba(216, 237, 249, 0.34);
+    border-color: rgba(93, 151, 188, 0.48);
+    box-shadow:
+        0 9px 25px rgba(48, 93, 132, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.88),
+        inset 0 -1px 0 rgba(61, 111, 151, 0.08),
+        0 0 0 2px rgba(106, 168, 202, 0.10);
+}
+
+.problem-tag {
+    color: rgba(24, 54, 82, 0.78);
+}
+
+.logo-text span {
+    transition: transform 240ms var(--glass-ease), text-shadow 240ms var(--glass-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logo-text span:hover {
+        transform: translateY(-2px);
+        text-shadow: 0 4px 12px rgba(55, 95, 132, 0.16);
+    }
+}
+
+input,
+select,
+textarea,
+input::placeholder {
+    color: var(--glass-ink);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(34, 57, 82, 0.48);
+}
+
+button:disabled,
+.resend-button:disabled {
+    cursor: not-allowed;
+    filter: saturate(0.72);
+    opacity: 0.56;
+    transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .feature-button:hover,
+    .profile-mini:hover,
+    .gender-button:hover,
+    .category-button:hover,
+    .problem-button:hover,
+    .auth-tab:hover,
+    .buttons button:hover,
+    .primary-button:hover,
+    .continue-button:hover,
+    .verify-button:hover,
+    .login-button:hover,
+    .back-button:hover,
+    .register-button:hover,
+    .forgot-button:hover,
+    .resend-button:hover,
+    .login-link:hover,
+    .link-button:hover,
+    .secondary-button:hover {
+        --glass-fill: rgba(225, 240, 250, 0.34);
+        border-color: rgba(255, 255, 255, 0.82);
+        filter: brightness(1.025);
+        transform: translateY(-2px);
+        box-shadow:
+            0 12px 28px rgba(42, 75, 112, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9),
+            inset 0 -1px 0 rgba(66, 108, 154, 0.08);
+    }
+}
+
+.feature-button:active,
+.profile-mini:active,
+.gender-button:active,
+.category-button:active,
+.problem-button:active,
+.auth-tab:active,
+.buttons button:active,
+.primary-button:active,
+.continue-button:active,
+.verify-button:active,
+.login-button:active,
+.back-button:active,
+.register-button:active,
+.forgot-button:active,
+.resend-button:active,
+.login-link:active,
+.link-button:active,
+.secondary-button:active {
+    --glass-fill: rgba(205, 226, 241, 0.38);
+    filter: brightness(0.99);
+    transform: scale(0.982);
+    transition-duration: 90ms;
+}
+
+@media (max-width: 700px) {
+    .glass-card,
+    .glass-panel,
+    .login-card,
+    .profile-card,
+    .register-card,
+    .verify-card {
+        -webkit-backdrop-filter: blur(14px) saturate(132%);
+        backdrop-filter: blur(14px) saturate(132%);
+    }
+
+    .feature-info,
+    .support-card,
+    .main-header,
+    .main-card,
+    .input-box,
+    .code-input,
+    .age-select,
+    .question-option,
+    .auth-tab,
+    .feature-button,
+    .profile-mini,
+    .gender-button,
+    .category-button,
+    .problem-button {
+        -webkit-backdrop-filter: blur(7px) saturate(128%);
+        backdrop-filter: blur(7px) saturate(128%);
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-item {
+        flex: 0 0 auto;
+    }
+
+    .feature-info {
+        display: none;
+    }
+
+    .feature-item.active .feature-info {
+        display: block;
+    }
+
+    .logo-text span:hover {
+        transform: none;
+        text-shadow: none;
+    }
+}

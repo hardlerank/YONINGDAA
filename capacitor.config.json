@@ -1,0 +1,9 @@
+{
+  "appId": "uz.yoningda.app",
+  "appName": "YONINGDA",
+  "webDir": "www",
+  "server": {
+    "url": "https://asosiy-loyiha-2.vercel.app/",
+    "cleartext": true
+  }
+}
